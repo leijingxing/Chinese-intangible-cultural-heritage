@@ -33,7 +33,7 @@ class _HuangMeiXiPageState extends State<HuangMeiXiPage> {
           // 背景折叠动画
           collapseMode: CollapseMode.parallax,
           background: Image.network(
-            "http://pics.sc.chinaz.com/files/pic/pic9/201910/zzpic20649.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572247894861&di=78d3e23a72a03d480c6de6642967308a&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20171115%2Ff0b8-fynstfh9855184.jpg",
             fit: BoxFit.cover,
           ),
         ),

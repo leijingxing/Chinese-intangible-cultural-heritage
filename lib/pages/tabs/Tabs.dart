@@ -165,6 +165,14 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
               },
             ),
             Divider(),
+            ListTile(
+              leading: Icon(Icons.theaters),
+              title: Text("切换主题"),
+              onTap: () {
+
+              },
+            ),
+            Divider(),
             ListTile(                                         //关于作者
               leading: Icon(Icons.accessibility),
               title: Text("关于作者"),

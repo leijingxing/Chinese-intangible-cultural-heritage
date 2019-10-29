@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:dazhushikeflutter/list/picture.dart';
-import 'package:dazhushikeflutter/page/gugong.dart';
 import 'package:dazhushikeflutter/page/jingju.dart';
 import 'package:dazhushikeflutter/page/piyingxi.dart';
 import 'package:dazhushikeflutter/page/HuangMeiXi.dart';
@@ -37,10 +36,6 @@ class _PicturePageState extends State<PicturePage> {
                     subtitle: Text(value["description"],
                         maxLines: 1, overflow: TextOverflow.ellipsis),
                     onTap: () {
-                      if(value["title"]=="故宫") {                      //判断名称以跳转
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => GugongPage()));
-                      }
                       if(value["title"]=="京剧") {
                         Navigator.of(context).push(
                           MaterialPageRoute(builder: (context)=>JingjuPage())

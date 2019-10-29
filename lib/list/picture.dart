@@ -12,12 +12,6 @@ List picture=[
     "description": '黄梅戏是由山歌、秧歌、茶歌、采茶灯、花鼓调，先于农村，后入城市，逐步形成发展起来的一个剧种。它吸收了汉剧、楚剧、高腔、采茶戏、京剧等众多剧种的因素，逐渐形成了自己的艺术特点。黄梅戏唱腔淳朴流畅，以明快抒情见长，具有丰富的表现力；表演质朴细致，以真实活泼著称。一曲《天仙配》让黄梅戏流行于大江南北，在海外亦有较高的声誉',
   },
   {
-    "title": '故宫',
-    "author": 'Mohamed Chahin',
-    "imageUrl": 'http://pics.sc.chinaz.com/files/pic/pic9/201610/fpic8227.jpg',
-    "description": '北京故宫是中国明清两代的皇家宫殿，旧称紫禁城，位于北京中轴线的中心，是中国古代宫廷建筑之精华',
-  },
-  {
     "title": '京剧',
     "author": 'Google',
     "imageUrl": 'http://pic2.sc.chinaz.com/Files/pic/pic9/201603/apic19817.jpg',

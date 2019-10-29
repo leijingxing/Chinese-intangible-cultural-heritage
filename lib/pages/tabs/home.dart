@@ -1,10 +1,10 @@
+import 'package:dazhushikeflutter/page/GuQingYiShu.dart';
 import 'package:flutter/material.dart';
 import 'package:dazhushikeflutter/page/appbar.dart';
 import 'package:dazhushikeflutter/page/ButtonPage.dart';
 import 'package:dazhushikeflutter/page/Swiper.dart';
 import 'package:dazhushikeflutter/page/CardDemo.dart';
 import 'package:dazhushikeflutter/list/picture.dart';
-import 'package:dazhushikeflutter/page/gugong.dart';
 import 'package:dazhushikeflutter/page/jingju.dart';
 import 'package:dazhushikeflutter/page/piyingxi.dart';
 import 'package:dazhushikeflutter/page/DaZhuShiKe.dart';
@@ -72,11 +72,6 @@ class _HomepageState extends State<Homepage>
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => TabsDemo()));
                           }
-                          if (picture[index]["title"] == "故宫") {
-                            //判断名称以跳转
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => GugongPage()));
-                          }
                           if (picture[index]["title"] == "京剧") {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => JingjuPage()));
@@ -88,6 +83,11 @@ class _HomepageState extends State<Homepage>
                           if (picture[index]["title"] == "黄梅戏") {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => HuangMeiXiPage()));
+                          }
+                          if(picture[index]["title"] == "古琴艺术") {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context)=>GuQingPage())
+                            );
                           }
                         },
                       ),

@@ -3,8 +3,8 @@ import 'package:dazhushikeflutter/list/meizidata.dart';
 import 'package:dazhushikeflutter/list/picture.dart';
 import 'package:dazhushikeflutter/list/yazhou.dart';
 import 'package:dazhushikeflutter/page/DaZhuShiKe.dart';
+import 'package:dazhushikeflutter/page/GuQingYiShu.dart';
 import 'package:dazhushikeflutter/page/HuangMeiXi.dart';
-import 'package:dazhushikeflutter/page/gugong.dart';
 import 'package:dazhushikeflutter/page/jingju.dart';
 import 'package:dazhushikeflutter/page/piyingxi.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +58,7 @@ class _CategoryPageState extends State<CategoryPage>
             ListView(
               children: picture.map((value) {
                 return Card(
-                elevation: 10.0,
+                  elevation: 10.0,
                   margin: EdgeInsets.all(30),
                   child: Column(
                     children: <Widget>[
@@ -80,11 +80,6 @@ class _CategoryPageState extends State<CategoryPage>
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => TabsDemo()));
                           }
-                          if (value["title"] == "故宫") {
-                            //判断名称以跳转
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => GugongPage()));
-                          }
                           if (value["title"] == "京剧") {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => JingjuPage()));
@@ -96,6 +91,10 @@ class _CategoryPageState extends State<CategoryPage>
                           if (value["title"] == "黄梅戏") {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => HuangMeiXiPage()));
+                          }
+                          if (value["title"] == "古琴艺术") {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => GuQingPage()));
                           }
                         },
                       ),

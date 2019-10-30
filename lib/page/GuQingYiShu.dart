@@ -169,12 +169,26 @@ class _ZhenQingXingShangState extends State<ZhenQingXingShang> {
                     itemBuilder: (BuildContext context, int index) {
                       return ListTile(
                         leading: CircleAvatar(
-                          backgroundImage: NetworkImage("http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/qintubiao1.png"),
+                          backgroundImage: NetworkImage("http://b-ssl.duitang.com/uploads/item/201402/18/20140218222914_scwuK.thumb.700_0.jpeg"),
                         ),
                         title: Text(qing[index]["name"]),
                         subtitle: Text(qing[index]["introduction"],overflow: TextOverflow.ellipsis,),
                         onTap: () {
+                          showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                title: Image.network(qing[index]["imageUrl"]),
+                                content: Text(qing[index]["name"]+"\n\n"+qing[index]["introduction"]),
 
+                                actions: <Widget>[
+                                  new FlatButton(
+                                    child: new Text("确定"),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                  ),
+                                ],
+                              ));
                         },
 
                       );

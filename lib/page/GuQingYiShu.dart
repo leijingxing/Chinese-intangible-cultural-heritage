@@ -169,7 +169,9 @@ class _ZhenQingXingShangState extends State<ZhenQingXingShang> {
                     itemBuilder: (BuildContext context, int index) {
                       return ListTile(
                         leading: CircleAvatar(
-                          backgroundImage: NetworkImage("http://b-ssl.duitang.com/uploads/item/201402/18/20140218222914_scwuK.thumb.700_0.jpeg"),
+                          backgroundImage: NetworkImage(
+                            "http://b-ssl.duitang.com/uploads/item/201402/18/20140218222914_scwuK.thumb.700_0.jpeg",
+                          ),
                         ),
                         title: Text(qing[index]["name"]),
                         subtitle: Text(qing[index]["introduction"],overflow: TextOverflow.ellipsis,),

@@ -26,7 +26,7 @@ List picture=[
   {
     "title":'古琴艺术',
     "author":"古琴艺术",
-    "imageUrl":"https://img.sogoucdn.com/v2/thumb/retype/ext/auto/q/75?appid=200698&url=https%3A%2F%2Fpic.wenwen.soso.com%2Fpqpic%2Fwenwenpic%2F0%2F20171124150831-1007747466_jpeg_300_225_9335%2F0",
+    "imageUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572374364764&di=5a0124a7d1ca030b15c121de1e38f02a&imgtype=0&src=http%3A%2F%2Fwww.7guqin.com%2FPublic%2FUploads%2Fimage%2F20171102%2F20171102090800_18451.jpg",
     "description":"古琴是最早的弹弦乐器，最古老也是最纯粹的华夏本土乐器，具有深厚的民族文化色彩。是中国古代地位最崇高的乐器，位列“琴棋书画”之首有着3000年悠久历史的古琴音乐，是中国音乐的重要组成部分，是中国传统音乐文化的代表。宋代陈旸在《乐书》中提到“琴者，乐之统也”，这一语道出了琴在中国古代音乐中的地位。她以其历史久远，文献瀚浩、内涵丰富和影响深远为世人所珍视。",
   },
   {

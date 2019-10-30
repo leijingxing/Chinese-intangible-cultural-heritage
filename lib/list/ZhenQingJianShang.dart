@@ -1,0 +1,63 @@
+List qing = [
+  {
+    "name":"九霄环佩",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/qxyp.png",
+    "introduction":"唐琴，伏羲式，北京故宫博物院藏。杉木材质。外表呈紫栗壳色，小蛇腹断纹间杂细密牛毛断。龙池、凤沼系扁长圆形，龙池上方刻有篆书“九霄环佩”四字，右侧刻有行书“超迹苍霄，逍遥太极。庭坚”十字。整张古琴宽阔厚重，造型古朴典雅，发音苍松透润，具有唐代古琴的典型特征。经郑珉中先生鉴定为盛唐雷氏琴之标准器，以“仙品”之称倍受琴家仰慕。"
+  },
+  {
+    "name":"枯木龙吟",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/kmly01.png",
+    "introduction":"唐琴，连珠式，中国艺术研究院藏。原髹黑漆，后人反复加以朱漆。发蛇腹断，局部有牛毛断和龟背断。蚌徽，琴轸与雁足为玉质，背面圆形龙池、扁圆形凤沼。龙池上方刻行书“枯木龙吟”四字，下方有篆书印章“玉振”一方。"
+  },
+  {
+    "name":"玉壶冰",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/ybh.png",
+    "introduction":"宋琴，神农式，天津市艺术博物馆藏。朱漆、玉徽、玉轸。发蛇腹间冰裂断。背面龙池凤沼均为长方形。龙池上方刻草书“玉壶冰”三字，下为“绍兴”双连印。"
+  },
+  {
+    "name":"万壑松风",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/whsf.png",
+    "introduction":"明琴，仲尼式，中国艺术研究院藏。底漆髹黑漆，表层为薄栗色漆。小蛇腹断，紫玉徽，额部镶有一块方形钧瓷。背面龙池凤沼均为长方形，龙池上方刻有篆书“万壑松风”字样，轸池下有“云谷老人”印，龙池下有“水晶子”印，腹内题款“大通元年钟山沈约监制”。"
+  },
+  {
+    "name":"壑 雷",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/hl01.png",
+    "introduction":"明琴，落霞式。底漆为黑色，修复时修以朱漆。蛇腹断间牛毛断，椭圆形龙池凤沼。龙池上方刻篆书“壑雷”二字。"
+  },
+  {
+    "name":"大圣遗音",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/dsyy01.png",
+    "introduction":"唐琴，灵机式（郑珉中先生认为神农式），北京故宫博物院藏。栗壳色漆外罩黑漆，局部有朱漆修复痕迹。琴体密布蛇腹断兼小牛毛断，大断纹已略有翘起。金徽、雁足与琴轸为玉质。圆形龙池、扁圆形凤沼。龙池上方刻草书“大圣遗音”。此琴发音松透古朴，线条简洁流畅，风格与故宫藏“九霄环佩”一致。"
+  },
+  {
+    "name":"鸣 凤",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/mf01.png",
+    "introduction":"南宋琴，变体连珠式，中国艺术研究院藏。面宽而扁，项、腰部连续四弧，整体造型端庄浑厚。原髹栗壳色漆，后以朱漆修补，有蛇腹间牛毛与小冰裂断纹。龙池凤沼为三连弧形。龙池上方刻楷书“凤鸣”二字。此琴最为引人注目之处在于琴首正中镶嵌着一块椭圆形的玉雕“翔凤”，做工精美，活灵活现。"
+  },
+  {
+    "name":"轻 雷",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/ql.png",
+    "introduction":"宋琴，伏羲式变体，中国艺术研究院藏。额部较宽，发散呈扇形。底漆黑色，漆质较硬；表漆赤黑相间。遍布大、小蛇腹断。龙池与凤沼皆呈圆形。龙池上方刻有篆书“轻雷”二字。音色浑厚松透。"
+  },
+  {
+    "name":"蕉叶琴",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/jyq.png",
+    "introduction":"明琴，蕉叶式，中国艺术研究院藏。外观别具一格、惟妙惟肖。琴首高约三厘米的叶柄造型取代一般琴首部位的护轸，起到保护琴首的作用。琴首与琴身中央有一长条浅沟，背部对应部位则为一条凸棱，以模仿叶茎的效果。琴体两侧边缘有轻微起伏，似叶边参差。原髹黄栗壳色，修补时改髹朱漆，琴首保留原色。发小蛇腹断，龙池凤沼均为扁圆形。"
+  },
+  {
+    "name":"秋岭鸣鹤",
+    "url":"",
+    "imageUrl":"http://old.ihchina.cn/jiyifeiyi/guqing/inc/images/qlmh.png",
+    "introduction":"明琴，号钟式。螺钿徽，岳山、承露、冠角、龙龈、琴轸、雁足均为紫檀木材质。髹黑漆，发牛毛断纹。龙池凤沼皆为圆形。此琴面板由多块桐木胶合而成，称“百衲琴”，底板则由两段木板拼成。"
+  },
+
+];

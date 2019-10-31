@@ -1,3 +1,4 @@
+import 'package:dazhushikeflutter/page/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 import 'home.dart';
@@ -8,12 +9,15 @@ import 'package:dazhushikeflutter/page/VideoPlay.dart';
 import 'package:dazhushikeflutter/page/picture.dart';
 import 'package:dazhushikeflutter/page/Search.dart';
 
+
 class Tabs extends StatefulWidget {
   @override
   _TabsState createState() => _TabsState();
 }
 
 class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
+
+
   AnimationController _controller;
   int _currentIndex = 0;
 
@@ -169,7 +173,11 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
             ListTile(
               leading: Icon(Icons.swap_horiz),
               title: Text("切换主题"),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(
+                 MaterialPageRoute(builder: (context)=>FirstPage())
+                );
+              },
             ),
             Divider(),
             ListTile(

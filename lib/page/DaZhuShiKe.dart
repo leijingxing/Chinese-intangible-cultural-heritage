@@ -40,7 +40,7 @@ class _DaZhuShiKePageState extends State<DaZhuShiKePage>
                 expandedHeight: 200.0,
                 flexibleSpace: Container(
                   child: Image.network(
-                    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573142566&di=c816f3ef1c04669c209caa6b1e2fcc31&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fitbbs%2F1811%2F07%2Fc4%2F118060063_1541553334198_mthumb.jpg',
+                    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572548266501&di=af672244687c84ea0bd21fe5b1fe7f71&imgtype=0&src=http%3A%2F%2Fp0.ifengimg.com%2Fa%2F2018_15%2F84367f33d9574d8_size59_w640_h429.jpg',
                     width: double.infinity,
                     repeat: ImageRepeat.repeat,
                     height: double.infinity,

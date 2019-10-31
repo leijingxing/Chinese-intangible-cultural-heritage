@@ -44,9 +44,8 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (content)=>SearchPage())
-              );
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (content) => SearchPage()));
             },
           )
         ],
@@ -117,7 +116,8 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
                 fit: BoxFit.fill,
               )),
             ),
-            ListTile(                                    //图片赏析
+            ListTile(
+              //图片赏析
               leading: Icon(Icons.image),
               title: Text("图片赏析"),
               onTap: () {
@@ -126,7 +126,8 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
               },
             ),
             Divider(),
-            ListTile(                             //精彩影像
+            ListTile(
+              //精彩影像
               leading: Icon(Icons.video_library),
               title: Text("精彩影像"),
               onTap: () {
@@ -151,29 +152,28 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
                 showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
-                      title: Text('亲'),
-                      content: Text(('你的版本是最新的哟！')),
-                      actions: <Widget>[
-                        new FlatButton(
-                          child: new Text("确定"),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        ),
-                      ],
-                    ));
+                          title: Text('亲'),
+                          content: Text(('你的版本是最新的哟！')),
+                          actions: <Widget>[
+                            new FlatButton(
+                              child: new Text("确定"),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        ));
               },
             ),
             Divider(),
             ListTile(
               leading: Icon(Icons.swap_horiz),
               title: Text("切换主题"),
-              onTap: () {
-
-              },
+              onTap: () {},
             ),
             Divider(),
-            ListTile(                                         //关于作者
+            ListTile(
+              //关于作者
               leading: Icon(Icons.accessibility),
               title: Text("关于作者"),
               onTap: () {

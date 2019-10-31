@@ -30,7 +30,6 @@ dependencies:
   flutter_simple_video_player: ^0.0.9
   shimmer: ^1.0.1
   share:
-
 dev_dependencies:
   flutter_test:
     sdk: flutter

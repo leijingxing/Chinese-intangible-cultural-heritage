@@ -78,7 +78,7 @@ class _CategoryPageState extends State<CategoryPage>
                         onTap: () {
                           if (value["title"] == "大足石刻") {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => TabsDemo()));
+                                builder: (context) => DaZhuShiKePage()));
                           }
                           if (value["title"] == "京剧") {
                             Navigator.of(context).push(MaterialPageRoute(

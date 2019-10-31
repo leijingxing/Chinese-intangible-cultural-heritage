@@ -1,240 +1,125 @@
 import 'package:flutter/material.dart';
 
-// Each TabBarView contains a _Page and for each _Page there is a list
-// of _CardData objects. Each _CardData object is displayed by a _CardItem.
+class DaZhuShiKePage extends StatefulWidget {
+  _DaZhuShiKePageState createState() => _DaZhuShiKePageState();
+}
 
-const String _kGalleryAssetsPackage = 'flutter_gallery_assets';
-
-class _Page {
-  _Page({this.label});
-
-  final String label;
-
-  String get id => label[0];
+class _DaZhuShiKePageState extends State<DaZhuShiKePage>
+    with SingleTickerProviderStateMixin {
+  TabController _tabController;
+  ScrollController _scrollViewController;
 
   @override
-  String toString() => '$runtimeType("$label")';
-}
+  void initState() {
+    super.initState();
+    _tabController = TabController(vsync: this, length: 2);
+    _scrollViewController = ScrollController(initialScrollOffset: 0.0);
+  }
 
-class _CardData {
-  const _CardData({this.title, this.imageAsset, this.imageAssetPackage});
-
-  final String title;
-  final String imageAsset;
-  final String imageAssetPackage;
-}
-
-final Map<_Page, List<_CardData>> _allPages = <_Page, List<_CardData>>{
-  new _Page(label: 'LEFT'): <_CardData>[
-    const _CardData(
-      title: '大足石刻',
-      imageAsset: 'http://pics.sc.chinaz.com/files/pic/pic9/201910/zzpic20411.jpg',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Sunglasses',
-      imageAsset: 'shrine/products/sunnies.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Clock',
-      imageAsset: 'shrine/products/clock.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Red popsicle',
-      imageAsset: 'shrine/products/popsicle.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Folding Chair',
-      imageAsset: 'shrine/products/lawn_chair.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Green comfort chair',
-      imageAsset: 'shrine/products/chair.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Old Binoculars',
-      imageAsset: 'shrine/products/binoculars.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Teapot',
-      imageAsset: 'shrine/products/teapot.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Blue suede shoes',
-      imageAsset: 'shrine/products/chucks.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-  ],
-  new _Page(label: 'RIGHT'): <_CardData>[
-    const _CardData(
-      title: 'Beachball',
-      imageAsset: 'shrine/products/beachball.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Dipped Brush',
-      imageAsset: 'shrine/products/brush.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-    const _CardData(
-      title: 'Perfect Goldfish Bowl',
-      imageAsset: 'shrine/products/fish_bowl.png',
-      imageAssetPackage: _kGalleryAssetsPackage,
-    ),
-  ],
-};
-
-class _CardDataItem extends StatelessWidget {
-  const _CardDataItem({this.page, this.data});
-
-  static const double height = 272.0;
-  final _Page page;
-  final _CardData data;
+  @override
+  void dispose() {
+    _tabController.dispose();
+    _scrollViewController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return new Card(
-      child: new Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: new Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            new Align(
-              alignment:
-              page.id == 'L' ? Alignment.centerLeft : Alignment.centerRight,
-              child: new CircleAvatar(child: new Text('${page.id}')),
-            ),
-            new SizedBox(
-              width: 144.0,
-              height: 144.0,
-              child: new Image.asset(
-                data.imageAsset,
-                package: data.imageAssetPackage,
-                fit: BoxFit.contain,
-              ),
-            ),
-            new Center(
-              child: new Text(
-                data.title,
-                style: Theme.of(context).textTheme.title,
-              ),
-            ),
-          ],
+    return Container(
+      height: 700.0,
+      child: Scaffold(
+        body: NestedScrollView(
+          controller: _scrollViewController,
+          headerSliverBuilder: (BuildContext context, bool boxIsScrolled) {
+            return <Widget>[
+              SliverAppBar(
+                title: Text('重庆大足石刻'),
+                pinned: true,
+                floating: true,
+                forceElevated: boxIsScrolled,
+                expandedHeight: 200.0,
+                flexibleSpace: Container(
+                  child: Image.network(
+                    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573142566&di=c816f3ef1c04669c209caa6b1e2fcc31&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fitbbs%2F1811%2F07%2Fc4%2F118060063_1541553334198_mthumb.jpg',
+                    width: double.infinity,
+                    repeat: ImageRepeat.repeat,
+                    height: double.infinity,
+                  ),
+                ),
+                bottom: TabBar(
+                  controller: _tabController,
+                  tabs: <Widget>[
+                    Tab(
+                      text: "Home",
+                      icon: Icon(Icons.home),
+                    ),
+                    Tab(
+                      text: "Help",
+                      icon: Icon(Icons.help),
+                    ),
+                  ],
+                ),
+              )
+            ];
+          },
+          body: TabBarView(
+            children: <Widget>[
+              PageOne(),
+              PageTwo(),
+            ],
+            controller: _tabController,
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.control_point),
+          onPressed: () {
+            _tabController.animateTo(1,
+                curve: Curves.bounceInOut,
+                duration: Duration(milliseconds: 10));
+            _scrollViewController
+                .jumpTo(_scrollViewController.position.maxScrollExtent);
+          },
         ),
       ),
     );
   }
 }
 
-class TabsDemo extends StatelessWidget {
-  static const String routeName = '/material/tabs';
-
+class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new DefaultTabController(
-      length: _allPages.length,
-      child: new Scaffold(
-        body: new NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return <Widget>[
-              new SliverOverlapAbsorber(
-                handle:
-                NestedScrollView.sliverOverlapAbsorberHandleFor(context),
-                child: new SliverAppBar(
-                  pinned: true,
-                  expandedHeight: 300.0,
-                  // 这个高度必须比flexibleSpace高度大
-                  forceElevated: innerBoxIsScrolled,
-                  bottom: PreferredSize(
-                      child: new Container(
-                        child: new TabBar(
-                          tabs: _allPages.keys
-                              .map(
-                                (_Page page) => new Tab(
-                              child: new Tab(text: page.label),
-                            ),
-                          )
-                              .toList(),
-                        ),
-                        color: Colors.brown,
-                      ),
-                      preferredSize: new Size(double.infinity, 46.0)),
-                  // 46.0为TabBar的高度，也就是tabs.dart中的_kTabHeight值，因为flutter不支持反射所以暂时没法通过代码获取
-                  flexibleSpace: new Container(
-                    child: new Column(
-                      children: <Widget>[
-                        new AppBar(
-                          title: Text("大足石刻"),
-                        ),
-                        new Expanded(
-                          child: new Container(
-                            child: Image.network(
-                              "http://pics.sc.chinaz.com/files/pic/pic9/201909/zzpic20120.jpg",
-                              fit: BoxFit.cover,
-                              repeat: ImageRepeat.repeat,
-                            ),
-                            width: double.infinity,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ];
-          },
-          body: new TabBarView(
-            children: _allPages.keys.map((_Page page) {
-              return new SafeArea(
-                top: false,
-                bottom: false,
-                child: new Builder(
-                  builder: (BuildContext context) {
-                    return new CustomScrollView(
-                      key: new PageStorageKey<_Page>(page),
-                      slivers: <Widget>[
-                        new SliverOverlapInjector(
-                          handle: NestedScrollView
-                              .sliverOverlapAbsorberHandleFor(context),
-                        ),
-                        new SliverPadding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 8.0,
-                            horizontal: 16.0,
-                          ),
-                          sliver: new SliverFixedExtentList(
-                            itemExtent: _CardDataItem.height,
-                            delegate: new SliverChildBuilderDelegate(
-                                  (BuildContext context, int index) {
-                                final _CardData data = _allPages[page][index];
-                                return new Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 8.0,
-                                  ),
-                                  child: new _CardDataItem(
-                                    page: page,
-                                    data: data,
-                                  ),
-                                );
-                              },
-                              childCount: _allPages[page].length,
-                            ),
-                          ),
-                        ),
-                      ],
-                    );
-                  },
-                ),
-              );
-            }).toList(),
+    return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Image.network(
+              'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572547885257&di=302d1de55a39be09ae3f8d571c333f06&imgtype=0&src=http%3A%2F%2Fwww.cnr.cn%2Ftravel%2Flytpj%2F200302160749_32694.jpg',
+              width: 300.0,
+              fit: BoxFit.contain,
+            ),
+            Image.network(
+              'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572547913237&di=a19a1a76029c793dab12c647adaf800e&imgtype=0&src=http%3A%2F%2Fthumb.takefoto.cn%2Fwp-content%2Fuploads%2F2015%2F06%2F201506131131472215.jpg',
+              width: 300.0,
+              fit: BoxFit.contain,
+            ),
+          ],
+        ));
+  }
+}
+
+class PageTwo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemExtent: 250.0,
+      itemBuilder: (context, index) => Container(
+        padding: EdgeInsets.all(10.0),
+        child: Material(
+          elevation: 4.0,
+          borderRadius: BorderRadius.circular(5.0),
+          color: index % 2 == 0 ? Colors.cyan : Colors.deepOrange,
+          child: Center(
+            child: Text(index.toString()),
           ),
         ),
       ),

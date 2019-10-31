@@ -36,11 +36,8 @@ class _HomepageState extends State<Homepage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
-
-      Column(
+      body: Column(
         children: <Widget>[
-
           Container(
             width: MediaQuery.of(context).size.width,
             height: 250.0,
@@ -70,7 +67,7 @@ class _HomepageState extends State<Homepage>
                         onTap: () {
                           if (picture[index]["title"] == "大足石刻") {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => TabsDemo()));
+                                builder: (context) => DaZhuShiKePage()));
                           }
                           if (picture[index]["title"] == "京剧") {
                             Navigator.of(context).push(MaterialPageRoute(
@@ -84,10 +81,9 @@ class _HomepageState extends State<Homepage>
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => HuangMeiXiPage()));
                           }
-                          if(picture[index]["title"] == "古琴艺术") {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(builder: (context)=>GuQingPage())
-                            );
+                          if (picture[index]["title"] == "古琴艺术") {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => GuQingPage()));
                           }
                         },
                       ),
@@ -104,25 +100,70 @@ class _HomepageState extends State<Homepage>
             ),
           ),
           Container(
-              height: 300,
-              width: 400,
-              margin: EdgeInsets.all(10),
-              child: ListTile(
-                contentPadding: EdgeInsets.fromLTRB(20, 200, 20, 10),
-                title: Text(
-                  "hello",
+            height: 450,
+            child: GridView.count(
+              crossAxisCount: 2,
+              mainAxisSpacing: 10.0,
+              crossAxisSpacing: 20.0,
+              padding: const EdgeInsets.all(20.0),
+              childAspectRatio: 1.3,
+              children: <Widget>[
+                GridTile(
+                    child: Image.network(
+                      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572545009780&di=8b0d03a1038f80eeee08575314299ba6&imgtype=0&src=http%3A%2F%2Fimg.bimg.126.net%2Fphoto%2FlNs-AEtxOk3pkRU_r60F_w%3D%3D%2F4856850723142941306.jpg",
+                      scale: 1,
+                      fit: BoxFit.cover,
+                    ),
+                  footer: ListTile(
+                    leading: Icon(Icons.video_library),
+                    title: Text("黄梅戏"),
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            title: Text("黄梅戏"),
+                            content: Text("女驸马"),
+                            actions: <Widget>[
+                              new FlatButton(
+                                child: new Text("确定"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          ));
+                    },
+                  )
                 ),
-                subtitle: Text("hello",),
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                  image: DecorationImage(
-                    image: NetworkImage("http://pics.sc.chinaz.com/files/pic/pic9/201910/bpic13857.jpg"),
-                    centerSlice: Rect.fromLTRB(270.0, 180.0, 1360.0, 730.0),
-                  ),
-              ),
-
-          ),
+                GridTile(
+                    footer: ListTile(
+                      leading: Icon(Icons.video_library),
+                      title: Text("古琴"),
+                      onTap: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: Text("古琴"),
+                              content: Text("九霄环佩"),
+                              actions: <Widget>[
+                                new FlatButton(
+                                  child: new Text("确定"),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ],
+                            ));
+                      },
+                    ),
+                    child: Image.network(
+                      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572546798141&di=c92df11835c211c4976ff941225e280b&imgtype=0&src=http%3A%2F%2Fculture.chinajilin.com.cn%2Fwebpic%2FW0201606%2FW020160614%2FW020160614380674570650.jpg",
+                      scale: 1,
+                      fit: BoxFit.cover,
+                    )),
+              ],
+            ),
+          )
         ],
       ),
     );
@@ -241,7 +282,6 @@ class _HomepageState extends State<Homepage>
     );
     */
 
-
     /* Container(
            height: 150.0,
            margin: EdgeInsets.fromLTRB(10, 30, 10, 10),
@@ -257,7 +297,5 @@ class _HomepageState extends State<Homepage>
              ),
            ),
          ),*/
-
-
   }
 }

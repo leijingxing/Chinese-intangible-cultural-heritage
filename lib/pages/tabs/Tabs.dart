@@ -1,4 +1,3 @@
-import 'package:dazhushikeflutter/page/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 import 'home.dart';
@@ -174,9 +173,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
               leading: Icon(Icons.swap_horiz),
               title: Text("切换主题"),
               onTap: () {
-                Navigator.of(context).push(
-                 MaterialPageRoute(builder: (context)=>FirstPage())
-                );
+
               },
             ),
             Divider(),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:dazhushikeflutter/list/piyingxi.dart';
+import 'package:dazhushikeflutter/list/PiYingXi.dart';
 class PiYingXiPage extends StatefulWidget {
   @override
   _PiYingXiPageState createState() => _PiYingXiPageState();

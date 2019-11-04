@@ -12,7 +12,7 @@ class _DaZhuShiKePageState extends State<DaZhuShiKePage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, length: 2);
+    _tabController = TabController(vsync: this, length: 3);
     _scrollViewController = ScrollController(initialScrollOffset: 0.0);
   }
 
@@ -50,13 +50,17 @@ class _DaZhuShiKePageState extends State<DaZhuShiKePage>
                   controller: _tabController,
                   tabs: <Widget>[
                     Tab(
-                      text: "Home",
+                      text: "首页",
                       icon: Icon(Icons.home),
                     ),
                     Tab(
-                      text: "Help",
-                      icon: Icon(Icons.help),
+                      text: "文化背景",
+                      icon: Icon(Icons.feedback),
                     ),
+                    Tab(
+                      text: "文化价值",
+                      icon: Icon(Icons.flip_to_back),
+                    )
                   ],
                 ),
               )
@@ -66,18 +70,15 @@ class _DaZhuShiKePageState extends State<DaZhuShiKePage>
             children: <Widget>[
               PageOne(),
               PageTwo(),
+              PageThree(),
             ],
             controller: _tabController,
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.control_point),
+          child: Icon(Icons.close),
           onPressed: () {
-            _tabController.animateTo(1,
-                curve: Curves.bounceInOut,
-                duration: Duration(milliseconds: 10));
-            _scrollViewController
-                .jumpTo(_scrollViewController.position.maxScrollExtent);
+            Navigator.of(context).pop();
           },
         ),
       ),
@@ -93,7 +94,7 @@ class PageOne extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Image.network(
-              'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572547885257&di=302d1de55a39be09ae3f8d571c333f06&imgtype=0&src=http%3A%2F%2Fwww.cnr.cn%2Ftravel%2Flytpj%2F200302160749_32694.jpg',
+              "http://47.102.146.16/dazhushike/images/pic10.jpg",
               width: 300.0,
               fit: BoxFit.contain,
             ),
@@ -102,6 +103,12 @@ class PageOne extends StatelessWidget {
               width: 300.0,
               fit: BoxFit.contain,
             ),
+            Image.network(
+              "http://47.102.146.16/dazhushike/images/pic04.jpg",
+              width: 300.0,
+              fit: BoxFit.contain,
+            ),
+
           ],
         ));
   }
@@ -119,7 +126,35 @@ class PageTwo extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0),
           color: index % 2 == 0 ? Colors.cyan : Colors.deepOrange,
           child: Center(
-            child: Text(index.toString()),
+            child: Container(
+              margin: EdgeInsets.all(4),
+              child: Image.network("http://47.102.146.16/dazhushike/images/pic13.png"),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+class PageThree extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemExtent: 250.0,
+      itemBuilder: (context, index) => Container(
+        padding: EdgeInsets.all(10.0),
+        child: Material(
+          elevation: 4.0,
+          borderRadius: BorderRadius.circular(5.0),
+          color: index % 2 == 0 ? Colors.cyan : Colors.deepOrange,
+          child: Center(
+            child: Container(
+              margin: EdgeInsets.all(4),
+              child: Image.network("http://47.102.146.16/dazhushike/images/pic13.png"),
+            ),
           ),
         ),
       ),

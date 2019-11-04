@@ -1,4 +1,4 @@
-import 'package:dazhushikeflutter/list/guqing.dart';
+import 'package:dazhushikeflutter/list/GuQing.dart';
 import 'package:flutter/material.dart';
 import 'package:dazhushikeflutter/list/ZhenQingJianShang.dart';
 

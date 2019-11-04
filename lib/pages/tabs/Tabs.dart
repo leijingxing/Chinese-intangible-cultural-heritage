@@ -173,7 +173,9 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
               leading: Icon(Icons.swap_horiz),
               title: Text("切换主题"),
               onTap: () {
-
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context)=>PicturePage())
+                );
               },
             ),
             Divider(),
